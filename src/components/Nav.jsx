@@ -2,11 +2,6 @@
 function Nav() {
   return (
     <>
-        <a href="#"
-            className="nav-link nav-item m-auto p-2" aria-current="page"
-        >
-            Home
-        </a>
         <a href="#projects"
             className="nav-link nav-item m-auto p-2" aria-current="page"
         >

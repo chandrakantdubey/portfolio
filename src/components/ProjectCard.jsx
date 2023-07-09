@@ -1,14 +1,18 @@
+import github from 'bootstrap-icons/icons/github.svg'
 
 function ProjectCard(project) {
   return (
-    <div className="project-card card col-12 col-sm-6 col-md-4 col-lg-3 mx-2 my-2">
-    <img src={project.imgUrl} className="card-img-top card-img" alt="..." />
+    <div className="col-12 col-sm-6 col-md-4 mx-2 my-2 card">
+    <div className="card-img-container">
+      <img src={project.imgUrl} className="card-img-top w-100 h-100 pt-2" alt={project.title} />
+    </div>
     <div className="card-body">
       <h5 className="card-title">{project.title}</h5>
-      <p className="card-text">
-        {project.description}
-      </p>
-      <a href={project.liveSite} className="btn btn-primary">{project.title}</a>
+      <hr />
+      <div className="d-flex justify-content-between gap-2 align-items-center">
+        <a target='_blank' href={project.liveSite} className="btn btn-primary">Visit Site</a>
+        <a target='_blank' href={project.github}>Github</a>
+      </div>
     </div>
   </div>
   )

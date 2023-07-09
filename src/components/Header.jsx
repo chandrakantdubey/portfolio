@@ -4,9 +4,10 @@ import logo from '../assets/blue_rabbit_no_bg.png'
 
 function Header() {
   return (
+    <div id="header" className="sticky-top">
     <header
-      className="row header mx-0 navbar navbar-expand-md"
-    >
+      className="container page-width header navbar navbar-expand-md"
+      >
       <div className="container">
         <a className="navbar-brand" href="#">
           <img
@@ -22,19 +23,20 @@ function Header() {
           type="button"
           data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
           aria-label="Toggle navigation"
-        >
+          >
           <span className="navbar-toggler-icon"></span>
         </button>
         <nav
           className="collapse navbar-collapse"
           id="navbarSupportedContent"
-        >
+          >
           <div className="navbar-nav ms-auto">
             <Nav />
           </div>
         </nav>
       </div>
     </header>
+    </div>
   )
 }
 

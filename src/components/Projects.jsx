@@ -1,47 +1,66 @@
 import ProjectCard from "./ProjectCard"
+
 import mapty from '../assets/project-images/mapty.png'
-import foodOrder from '../assets/project-images/food-ordering.png'
-import travelJournal from '../assets/project-images/travel-journal.png'
-import vansLife from '../assets/project-images/vans.jpg.png'
+import rental from '../assets/project-images/rental.png'
+import learningJournal from '../assets/project-images/learning-journal.png'
+import littleLemon from '../assets/project-images/little-lemon.png'
+import momentumDashboard from '../assets/project-images/momentum-dashboard.png'
+import minimalisticBlog from '../assets/project-images/minimalistic.png'
 
 function Projects() {
   const projects = [
     {
       id: 1,
-      title: "Mapty Trek Tracker",
+      title: "Trek Tracker",
       imgUrl: mapty,
-      description: "The app tracks the cycling and trekking on the map.",
-      liveSite:"https://trek-cycle-mapper.netlify.app"
+      liveSite:"https://mapty-trekking-app.vercel.app/",
+      github: "https://github.com/chandrakantdubey/Mapty_App"
     },
     {
       id: 2,
-      title: "Vans Life",
-      imgUrl: vansLife,
-      description: "This app is used for renting the vans and listing the vans.",
-      liveSite:"https://live-vans-life.netlify.app"
+      title: "Rental Vans",
+      imgUrl: rental,
+      liveSite:"https://rental-vans-app.vercel.app/",
+      github:"https://github.com/chandrakantdubey/vans-life",
     },
     {
       id: 3,
-      title: "Travel Journal",
-      imgUrl: travelJournal,
-      description: "This travel journal is used for listing the travel.",
-      liveSite:"https://chandrakant-travel-journal.netlify.app"
+      title: "Learning Journal",
+      imgUrl: learningJournal,
+      liveSite:"https://chandrakants-learning-journal.vercel.app/",
+      github:"https://github.com/chandrakantdubey/learning-journal",
     },
     {
       id: 4,
-      title: "Food ordering",
-      imgUrl: foodOrder,
-      description: "This app is used for ordering food from a restaurant.",
-      liveSite:"https://chandrakants-food-ordering-app.netlify.app"
+      title: "Little Lemon Restro",
+      imgUrl: littleLemon,
+      liveSite:"https://little-lemon-restaurant-ten.vercel.app/",
+      github:"https://github.com/chandrakantdubey/little-lemon",
+    },
+    {
+      id: 5,
+      title: "Momentum Dashboard",
+      imgUrl: momentumDashboard,
+      liveSite:"https://chrome-ext-momentum-dashboard.vercel.app/",
+      github:"https://github.com/chandrakantdubey/chrome-ext-momentum-dashboard",
+    },
+    {
+      id: 6,
+      title: "Minmilastc Blog",
+      imgUrl: minimalisticBlog,
+      liveSite:"https://minimalistic-blog-sigma.vercel.app/",
+      github:"https://github.com/chandrakantdubey/minimalistic-blog",
     },
   ]
   return (
-    <div id="projects" className="py-4">
-      <h2 className="text-center py-4">Projects</h2>
-      <div className="projects mx-0 row gx-2 px-2 justify-content-center">
-      {
-        projects.map(project => <ProjectCard  key={project.id} {...project} />)
-      }
+    <div id="projects">
+      <div className="container page-width">
+        <h2 className="text-center py-4">Projects</h2>
+        <div className="row justify-content-center">
+          {
+            projects.map(project => <ProjectCard  key={project.id} {...project} />)
+          }
+        </div>
       </div>
     </div>
   )
